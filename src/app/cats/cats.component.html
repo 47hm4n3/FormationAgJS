@@ -1,0 +1,22 @@
+<p>cats works!</p>
+
+
+<p *ngFor="let cat of cats">
+    <li [style.color]=cat.getCouleur() >Le " {{cat.nom}} " est {{cat.couleur}} et est agé de {{cat.age}} an(s)
+    <button class="button" (click)="miauler(cat.nom)">{{cat.nom}}</button>
+    <!-- <label>Strategy1 : <input [attr.data-value]="cat.getNom" (input)="cat.nom = ($event.target).value"></label> -->
+    <!-- <label>Strategy2 : <input [ngModel]="cat.nom" (ngModelChange)="cat.nom = $event"></label> -->
+    <label>Strategy3 : <input [(ngModel)]="cat.nom"></label>
+    </li>
+</p>
+
+
+<!-- 
+<div *ngFor="let cat of cats">
+    <li [ngStyle]='myStyle' >Le " {{cat.nom}} " est {{cat.couleur}} et est agé de {{cat.age}} an(s)
+    <button class="button" (click)="miauler(cat.nom)">{{cat.nom}}</button>
+    <label>Strategy1 : <input [Value]="cat.nom" (input)="cat.nom = $event.target.Value"></label>
+     <label>Strategy2 : <input [ngModel]="cat.nom" (ngModelChange)="cat.nom = $event"></label>
+    <label>Strategy3 : <input [(ngModel)]="cat.nom"></label>
+    </li>
+</div> -->

@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+/* myStyle :{
+'fontSize' = 50px
+} */
+
+
+.button {
+    background-color: rgb(152, 152, 189);
+    color: black;
+    border: 2px solid #c4e7c5;
+  }
+
+div {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
