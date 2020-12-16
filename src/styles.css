@@ -10,9 +10,9 @@
     border: 2px solid #c4e7c5;
   }
 
-div {
-  width: 320px;
+.myClass {
+  width: 500px;
   padding: 10px;
-  border: 5px solid gray;
+  border: 2px solid lightgray;
   margin: 0;
 }

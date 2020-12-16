@@ -5,15 +5,15 @@
     <p>
         <label>Faite : <input value="false" type="checkbox"></label>
     </p>
+    <p>
+        <button class="button" (click)="addTodo(todo)">Add task</button>
+    </p>
 <div *ngFor="let todo of todos">
     <p>
-        <li [style.color]="blue" >
+        <li [style.color]=blue >
             <input value="{{todo.faite}}" type="checkbox" [checked]="todo.faite == true">
             La tache " {{todo.num}} " : {{todo.txt}}
-        <button class="button" (click)="ngOnInit()">{{todo.num}}</button>
-        <!-- <label>Strategy1 : <input [attr.data-value]="cat.getNom" (input)="cat.nom = ($event.target).value"></label> -->
-        <!-- <label>Strategy2 : <input [ngModel]="cat.nom" (ngModelChange)="cat.nom = $event"></label> -->
-        <!-- <label>Strategy3 : <input [(ngModel)]="cat.nom"></label> -->
+        <button class="button" (click)="deleteTodo(todo.num)">Delete task {{todo.num}}</button>
         </li>
     </p>
 </div>

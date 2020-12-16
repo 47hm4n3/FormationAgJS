@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from './todo';
+import { NgModel } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-todo-list',
@@ -10,8 +12,8 @@ export class TodoListComponent implements OnInit {
 
 
   todos : Todo[] = [
-    // new Todo(1,"", false),
-    // new Todo(2,"", true),
+    new Todo(1,"", false),
+    new Todo(2,"", true),
     // new Todo(3,"", false),
     // new Todo(4,"", true),
     // new Todo(5,"", true),
@@ -23,8 +25,9 @@ export class TodoListComponent implements OnInit {
     // new Todo(11,"", true)
                   ]
 
+    
+
   cpt : number = 0;
-  blue : string = "blue";
 
   constructor() { }
 

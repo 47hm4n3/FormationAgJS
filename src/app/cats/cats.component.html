@@ -4,9 +4,9 @@
 <p *ngFor="let cat of cats">
     <li [style.color]=cat.getCouleur() >Le " {{cat.nom}} " est {{cat.couleur}} et est agé de {{cat.age}} an(s)
     <button class="button" (click)="miauler(cat.nom)">{{cat.nom}}</button>
-    <!-- <label>Strategy1 : <input [attr.data-value]="cat.getNom" (input)="cat.nom = ($event.target).value"></label> -->
-    <!-- <label>Strategy2 : <input [ngModel]="cat.nom" (ngModelChange)="cat.nom = $event"></label> -->
-    <label>Strategy3 : <input [(ngModel)]="cat.nom"></label>
+    <!-- <p><label>Strategy1 : <input [attr.data-value]="cat.getNom" (input)="cat.nom = ($event.target).value"></label></p> -->
+    <p><label>Strategy2 : <input [ngModel]="cat.nom" (ngModelChange)="cat.nom = $event"></label></p>
+    <p><label>Strategy3 : <input [(ngModel)]="cat.nom"></label></p>
     </li>
 </p>
 

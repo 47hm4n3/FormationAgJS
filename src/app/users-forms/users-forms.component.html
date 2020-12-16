@@ -1,1 +1,44 @@
 <p>users-forms works!</p>
+
+<form [formGroup]="userProfileForm" (ngSubmit)="onSubmit">
+    <h3>User</h3>
+    <p><label>Nom:      <input type="text" formControlName="nom"></label></p>
+    <p><label>Prenom:   <input type="text" formControlName="prenom"></label></p>
+    <p><label>Age:      <input type="text" formControlName="age"></label></p>
+
+    <div formGroupName="adresse">
+        <h3>Address</h3>
+        <p><label>Num:  <input type="text" formControlName="num"></label></p>
+        <p><label>Rue:  <input type="text" formControlName="rue"></label></p>
+        <p><label>Ville:<input type="text" formControlName="ville"></label></p>
+    </div>
+    <div formArrayName="listeChats">
+        <h3>Cats</h3>
+        <div *ngFor="let chat of list.controls; let i = index">
+            <p><label>Cat {{i+1}}: <input type="text" formControlName="i"></label></p>
+        </div>
+        <button (click)="addNewCat()">Add cat</button>
+    </div>
+    <button type="submit">Sauvegarder</button>
+
+    <h3>Display</h3>
+    <div *ngFor="let user of users">
+        <li [style.color]=blue >Name: {{user.nom}}, LastName: {{user.prenom}}, Age: {{user.age}} an(s)
+        <p><label>Strategy3 : <input [(ngModel)]="user.nom"></label></p>
+        </li>
+    </div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+

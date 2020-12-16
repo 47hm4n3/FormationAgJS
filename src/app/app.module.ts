@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-// import { NgModel } from '@angular/forms';
-// import { NgForm } from '@angular/forms';
-import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms' // for formGroup issue
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,11 +22,7 @@ import { UsersFormsComponent } from './users-forms/users-forms.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    // ,NgModel
-    // ,NgForm
-    FormBuilder,
-    FormGroup,
-    FormArray
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
